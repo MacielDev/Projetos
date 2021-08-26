@@ -1,0 +1,46 @@
+body{
+    background: #7be5f3;
+    font:normal 20px Arial;
+    font-style: italic;
+    color: rgb(77, 76, 73);
+    text-align: center;
+}
+#dataNasc{
+    border-radius: 4px;
+    border:10px rgb(245, 239, 239);
+    box-shadow: 1px 1px 6px rgb(172, 169, 169);
+
+}
+#formulario{
+    background: rgb(235, 231, 231);
+    border-radius: 6px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2px;
+    padding: 5px;
+    
+}
+#verificar{
+    font: normal 20px Arial;
+    font-style: italic;
+    color:  rgb(77, 76, 73);
+    background-color:  rgb(236, 235, 230);
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgb(172, 169, 169) ;
+}
+div{
+   margin: auto;
+   padding: 4px;
+  /* background-color: burlywood;*/
+}
+#res{
+    text-align: center;
+    width: 70%;
+    margin: auto; 
+}
+footer{
+    margin-top: -2px;
+}
+img{
+    margin-top: 14px;
+}
