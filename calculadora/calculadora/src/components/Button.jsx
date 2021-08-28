@@ -10,7 +10,7 @@ export default props =>{
     classes += props.triple ? 'triple' :''
     return (
         <button 
-            onClick={e => props.click(props.label)}
+            onClick={e => props.click &&props.click(props.label)}
             className={classes}>
             {props.label}
         </button>
