@@ -12,7 +12,8 @@ function horario(){
     document.getElementById('horario').innerHTML = relogio
 }
 function imagem(){
-    var periodo =agora.getHours()
+
+    var periodo = agora.getHours()
     var mesagem = document.getElementById('mensagem')
     var imagem = document.getElementById('imagem')
     var corBody = document.getElementById('fundo')
