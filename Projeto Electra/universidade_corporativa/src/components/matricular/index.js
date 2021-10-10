@@ -11,10 +11,10 @@ const Matricular = (props) => {
   const toggle = () => setModal(!modal);
   return (
     <div>
-      <Button  color="primary" onClick={toggle}>Matricular</Button>
-      <Modal isOpen={modal} toggle={toggle}>
+      <Button color="primary" onClick={toggle}>Matricular</Button>
+      <Modal  size="lg" isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Matricula</ModalHeader>
-        <ModalBody className="matricula_container_principal">
+        <ModalBody>
             <FormMatricula/>
         </ModalBody>
       </Modal>

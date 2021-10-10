@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import estiloHeader from './estilo.css'
-import logoElectra from './imagens/logo.png'
+import estiloHeader from "./estilo.css";
+import logoElectra from "./imagens/logo.png";
 import {
   Collapse,
   Navbar,
@@ -13,10 +13,9 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText,
-  Button
+  Button,
 } from "reactstrap";
-import Matricular from '../matricular'
-
+import Matricular from "../matricular";
 
 /*Dispara processo de matricular
 function _matricular(evento){
@@ -24,13 +23,11 @@ function _matricular(evento){
 }
 */
 //Dispara o processo de Login
-function _logar(evento){
-  console.log('O botão de login foi clicado')
-  
+function _logar(evento) {
+  console.log("O botão de login foi clicado");
 }
 
 const HeaderPrincipal = (props) => {
-  
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -38,15 +35,16 @@ const HeaderPrincipal = (props) => {
   return (
     <div className="headerPrincipal-conteiner">
       <Navbar color="light" light expand="md">
-        <img className="headerPrincipal_logo" src={logoElectra} alt="logo-Electra-informatica" />
+        <img
+          className="headerPrincipal_logo"
+          src={logoElectra}
+          alt="logo-Electra-informatica"
+        />
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-          <NavItem>
-              <NavLink
-                href="https://electra.com.br/web/"
-                target="_blank"
-              >
+            <NavItem>
+              <NavLink href="https://electra.com.br/web/" target="_blank">
                 HOME
               </NavLink>
             </NavItem>
@@ -66,7 +64,7 @@ const HeaderPrincipal = (props) => {
                 UNIVERSIDADE CORPORATIVA
               </NavLink>
             </NavItem>
-            
+
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 TREINAMENTOS
@@ -82,11 +80,10 @@ const HeaderPrincipal = (props) => {
             </UncontrolledDropdown>
           </Nav>
           <NavbarText>Ainda não é nosso aluno?</NavbarText>
-          
-          <Matricular/>
-          
-          <Button outline color="primary"
-          onClick={_logar}>
+
+          <Matricular />
+
+          <Button outline color="primary" onClick={_logar}>
             LOGIN
           </Button>
         </Collapse>
