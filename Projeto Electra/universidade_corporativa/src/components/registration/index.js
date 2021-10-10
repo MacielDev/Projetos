@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody} from "reactstrap";
 import FormRegistration from "../formRegistration";
 import estilo from './estilo.css'
 
@@ -20,8 +20,11 @@ const Registration = (props) => {
           MATRICULAR
         </Button>
      
-      <Modal size="lg" isOpen={modal} toggle={toggle} className="">
-        <ModalHeader toggle={toggle}>MATRICULA</ModalHeader>
+      <Modal
+       size="lg" 
+       isOpen={modal} 
+       toggle={toggle}>
+       
         <ModalBody>
             <FormRegistration/>
         </ModalBody>

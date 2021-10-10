@@ -15,6 +15,7 @@ import {
 } from "reactstrap";
 import Registration from "../registration";
 import logo from "./logo.png";
+import Login from "../login"
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,6 +58,9 @@ const Header = (props) => {
             <NavbarText>AINDA NÃO É NOSSO ALUNO?</NavbarText>
             <NavItem>
               <Registration/>
+            </NavItem>
+            <NavItem>
+              <Login/>
             </NavItem>
           </Nav>
           
