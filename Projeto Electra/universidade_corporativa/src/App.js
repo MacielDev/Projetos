@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react";
+import Header from "./components/header";
+import BannerPrincipal from "./components/bannerPrincipal";
 
-function App (props){
-  return(
-    <h1>Do zero</h1>
-  )
+function App(props) {
+  return (
+    <div className="container-lg">
+      <Header />
+      <BannerPrincipal />
+    </div>
+  );
 }
-export default App
+export default App;
