@@ -3,7 +3,8 @@ import Header from "./components/header";
 import BannerPrincipal from "./components/bannerPrincipal";
 import SectionCursos from "./components/sectionCursos";
 import BannerCursos from "./components/bannerCursos"
-import Localization from "./components/localizacao";
+import Footer from "./components/footer";
+
 
 function App(props) {
   return (
@@ -12,7 +13,7 @@ function App(props) {
       <BannerPrincipal />
       <BannerCursos/>
       <SectionCursos/>
-      <Localization/>
+      <Footer/>
 
     </div>
   );
