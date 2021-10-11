@@ -13,7 +13,9 @@ const FormLogin = (props) => {
         <Label for="examplePassword">Password</Label>
         <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
       </FormGroup>
-      <Button className="formLogin_positio_button">Entrar</Button>
+      <Button 
+      color="primary"
+      className="formLogin_positio_button">Entrar</Button>
     </Form>
   );
 }

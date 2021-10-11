@@ -16,6 +16,8 @@ import {
 import Registration from "../registration";
 import logo from "./logo.png";
 import Login from "../login"
+import estilo from './estilo.css'
+
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,26 +34,37 @@ const Header = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="https://electra.com.br/web/">HOME</NavLink>
+              <NavLink className="headerHoverEstilo" href="https://electra.com.br/web/">HOME</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://electra.com.br/web/universidade-corporativa/">
+              <NavLink
+              className="headerHoverEstilo" 
+              href="https://electra.com.br/web/universidade-corporativa/">
                 UNIVERSIDADE CORPORATIVA
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://electra.com.br/web/#sobre-nos">
+              <NavLink
+              className="headerHoverEstilo" 
+              href="https://electra.com.br/web/#sobre-nos">
                 SOBRE NÓS
               </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle
+              className="headerHoverEstilo" 
+              nav caret>
                 CURSOS
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>FRONT-END</DropdownItem>
-                <DropdownItem>BACK-END</DropdownItem>
-                <DropdownItem>ENGENHARIA DE SOFTWARE</DropdownItem>
+                <DropdownItem className="headerHoverEstilo" >FRONT-END
+                </DropdownItem>
+                <DropdownItem
+                className="headerHoverEstilo" >BACK-END
+                </DropdownItem>
+                <DropdownItem
+                className="headerHoverEstilo" >ENGENHARIA DE SOFTWARE
+                </DropdownItem>
                 <DropdownItem/>
               </DropdownMenu>
             </UncontrolledDropdown>

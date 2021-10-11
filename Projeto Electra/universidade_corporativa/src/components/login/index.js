@@ -13,7 +13,7 @@ const Login = (props) => {
       size="sm" 
       outline color="primary"
       onClick={toggle}>
-        Login
+        LOGIN
       </Button>
       <Modal 
       size ="ie"
