@@ -1,0 +1,12 @@
+.footer_style
+{
+    background-color: #24262e;
+    color: #fff;
+    width: 100%!important;
+    height: 500px;
+}
+.container_footer{
+    margin-top: 100px!important;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
