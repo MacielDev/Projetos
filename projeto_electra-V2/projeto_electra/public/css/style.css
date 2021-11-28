@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Geral*/
 *{
     font-family:'Roboto';
@@ -186,6 +187,7 @@ body {
 /*HOME*/
 .home_container {
     margin-top: 10rem !important;
+    margin-left: 9rem;
 }
 .link_areas {
     color: #212529;

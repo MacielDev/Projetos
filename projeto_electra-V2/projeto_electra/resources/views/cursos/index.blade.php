@@ -47,7 +47,7 @@
 
     </table>
     <tfoot>
-        <a href="{{route('criar-curso-form')}}">
+        <a href="{{route('create')}}">
             @csrf
             <button type="button" class="col btn btn-primary btn-lg btn-block">CRIAR CURSO<i class="fas fa-curling"></i></button>
         </a>

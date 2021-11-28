@@ -4,12 +4,12 @@
 
 @section('content')
 
-<div class="container home_container">
+<div class="container home_container main_top">
     <div class="container-fluid">
         <div class="row">
 
             @foreach($categorias as $categoria)
-            <div class=" col">
+            <div class="col mt-4 mb-3">
                 <div class="card" style="width: 18rem;">
                     <a href="{{route('apresentarCursos')}}" class="link_areas">
                         <img src="images/formacoes/front-end.png" class="card-img-top" alt="...">

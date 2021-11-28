@@ -6,7 +6,7 @@
 
 <div class="container conteudo-position">
 
-    <form action="{{route('criarCurso')}}" method="post">
+    <form action="{{route('create')}}" method="post">
         @csrf
         <div class="form-row">
             <div class="form-group col-md-12">

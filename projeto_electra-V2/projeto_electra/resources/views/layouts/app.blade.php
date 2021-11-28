@@ -10,9 +10,9 @@
 
     <title>@yield('title')</title>
 
-
-    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{asset('css/style.css')}}" rel="styllesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 
 
 </head>
@@ -55,7 +55,7 @@
                             @endif
                             @else
                             <li class="nav-item">
-                                <a href="{{route('categoria-form')}}" class="nav-link">CRIAR CATEGORIA</a>
+                                <a href="{{route('create')}}" class="nav-link">CRIAR CATEGORIA</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

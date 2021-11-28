@@ -4,7 +4,7 @@
 
 @section('content-cursos')
 
-<form action="{{route('criarCategoria')}}" method="POST">
+<form action="{{route('store')}}" method="POST">
     @csrf
     <div class="conteudo-position container-lg">
         <div class="form-row">
@@ -21,8 +21,8 @@
                 <textarea type="text" class="form-control" name="descricao" id="descricao" placeholder="Fale mais sobre a nova categoria"></textarea>
             </div>
 
-            <div class="btn btn-block form-group col-md-12">
-                <button class="btn btn-group-lg btn-primary btn-block">CRIAR</button>
+            <div class=" form-group col-md-12">
+                <button class="pt-2 pb-2 btn btn-group-lg btn-primary btn-block">CRIAR</button>
             </div>
         </div>
     </div>

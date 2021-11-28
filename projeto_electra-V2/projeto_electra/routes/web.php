@@ -15,24 +15,24 @@ Auth::routes();
 Route::get('/home',[App\Http\Controllers\CategoriaController::class, 'index'])->name('home');
 
 //Formulário para a criação de novas categorias
-Route::get('/home/criar-categoria',[App\Http\Controllers\CategoriaController::class,'create'])->name('categoria-form');
+Route::get('/home/create',[App\Http\Controllers\CategoriaController::class,'create'])->name('create');
 
 //Armazenamento da nova categoria criada
-Route::post('/home/salvar-categoria',[App\Http\Controllers\CategoriaController::class, 'store'])->name('criarCategoria');
+Route::post('/home/categoria/store',[App\Http\Controllers\CategoriaController::class, 'store'])->name('store');
 
 //Buscar usuários, categorias e cursos cadastrados -- Montar tabela e campos para criação de novos cursos
 Route::get('/home/apresentarCursos',[App\Http\Controllers\CursoController::class, 'index'])->name('apresentarCursos');
 
 //Formulário para criação de novo curso
-Route::get('/home/criar-curso',[App\Http\Controllers\CursoController::class, 'create'])->name('criar-curso-form');
+Route::get('/home/create',[App\Http\Controllers\CursoController::class, 'create'])->name('create');
 
 //Armazenamento do novo curso criado
-Route::post('/home/salvar-curso',[App\Http\Controllers\CursoController::class, 'store'])->name('criarCurso');
+Route::post('/home/store',[App\Http\Controllers\CursoController::class, 'store'])->name('store');
 
 
 Route::delete('/cursos/$curso/{id_curso}',[App\Http\Controllers\CursoController::class,'destroy']);
 
 
 
-//Rota que retorna todos os cursos
+
 

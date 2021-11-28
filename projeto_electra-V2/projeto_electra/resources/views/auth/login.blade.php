@@ -2,7 +2,7 @@
 
 
 @section('content')
-<main class="main_login form-signin text-center">
+<main class="mt-5 pt-5 form-signin text-center">
     <h1 class="h3 mb-3 fw-normal">Bem vindo a Electra</h1>
     <form method="POST" action="{{ route('login') }}">
         @csrf
