@@ -1,0 +1,31 @@
+/*GERAL*/
+html{
+    font-family: Helvetica;
+    background-color: #DDD;
+}
+/*CONTAINER*/
+.container{
+    max-width: 1200px;
+    position: relative;
+    padding: 20px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    background-color: #fff;
+
+}
+/*HEADER*/
+
+/*IMG-DESTAQUE*/
+
+/*BIOGRAFIA-CONTAINER*/
+
+
+/*FRASE-CONTAINER*/
+
+/*CURIOSIDADES-CONTAINER*/
+
+/*DESTAQUE*/
+.destaque{
+    font-weight: bold;
+}
