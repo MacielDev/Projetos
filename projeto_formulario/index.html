@@ -6,50 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Veículos</title>
-    <link type="text/css" rel="stylesheet" href="./css/style.css">
+
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <p></p>
-    </header>
+    <div class="container">
+        <header class="header">
+            <h3>Cadastre seu veículo para vender muito mais rápido !</h3>
+        </header>
+        <main class="form-container">
+            <div class="form-header">
+                <p>Cadastro</p>
+            </div>
+            <div class="form-body">
+                <h1 class="form-title">Venda fácil seu veículo</h1>
+                <p>Descreva as características do seu veículo e marque todos os opcionais e características que ele possui
+                </p>
+                <form action="">
+                    <div class="box-input">
+                        <label for="title" for="">Título do anúncio:
+                            <span class="required-field">*</span></label>
+                        <input type="text" name="title" id="title" class="block" placeholder="Defina um título para o seu veículo" minlength="1" maxlength="30" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="price">Preço do veículo:span class="required-field">*</span>
+                        </label>
+                        <input id="price" name="price" type="number">
+                    </div>
+
+
+
+                    <label for="">Descrição:</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                    <label for="">Único dono?</label>
+                    <option value="">
+
+                    </option>
+
+                    <label for="">Marca:</label>
+                    <input type="text" placeholder="Digite a marca do seu veículo">
+
+                    <label for="">Modelo:</label>
+                    <input type="text" placeholder="Digite o modelo do seu veículo">
+
+                    <label for="">Quilometragem:</label>
+                    <input type="text">
+
+                    <label for="">Data de compra do veículo:</label>
+                    <input type="date" placeholder="dd / mm / aaaa">
+
+                    <label for="">Manual</label>
+                    <input type="radio" name="" id="">
+                    <label for="">Automático</label>
+                    <input type="radio" name="" id="">
+
+                    <input type="submit" class="btn-submit" value="Cadastrar">
+                </form>
+            </div>
+
+        </main>
+    </div>
+
 </body>
-<main>
-    <h1></h1>
-    <h2></h2>
-    <p></p>
-    <form action="">
-        <label for="">Título do anúncio:</label>
-        <input type="text" placeholder="Defina um título para o seu veículo">
-
-        <label for="">Preço do veículo:</label>
-        <input type="number">
-
-        <label for="">Descrição:</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-
-        <label for="">Único dono?</label>
-        <option value="">
-
-        </option>
-
-        <label for="">Marca:</label>
-        <input type="text" placeholder="Digite a marca do seu veículo">
-
-        <label for="">Modelo:</label>
-        <input type="text" placeholder="Digite o modelo do seu veículo">
-
-        <label for="">Quilometragem:</label>
-        <input type="text">
-
-        <label for="">Data de compra do veículo:</label>
-        <input type="date" placeholder="dd / mm / aaaa">
-
-        <label for="">Manual</label>
-        <input type="radio" name="" id="">
-        <label for="">Automático</label>
-        <input type="radio" name="" id="">
-    </form>
-</main>
 
 </html>
