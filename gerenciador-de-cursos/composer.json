@@ -5,8 +5,9 @@
         }
     },
     "require": {
-        "doctrine/orm": "^2.6",
+        "doctrine/orm": "^2.11",
         "symfony/cache": "^6.0",
-        "symfony/yaml": "^6.0"
+        "symfony/yaml": "^6.0",
+        "doctrine/annotations": "^1.13"
     }
 }
