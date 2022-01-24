@@ -32,5 +32,9 @@ class Persistencia implements InterfaceControladorRequisicao{
         // Inserir no banco 
         $this->entityManager->persist($curso);
         $this->entityManager->flush();
-    }
+
+        //UTILIZANDO UM CABEÇALHO PHP PARA REDIRECIONAR O BROWSER PARA OUTRA PÁGINA
+        echo "Curso $descricao salvo com sucesso";
+        header('Location:/listar-cursos',true,302);
+        }
 }
