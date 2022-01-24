@@ -1,8 +1,5 @@
 <?php
 namespace Alura\Cursos\Controller;
-
-
-
 use Alura\Cursos\Entity\Curso;
 use Alura\Cursos\Infra\EntityManagerCreator;
 use Alura\Cursos\Controller\InterfaceControladorRequisicao;
@@ -20,13 +17,17 @@ class Persistencia implements InterfaceControladorRequisicao{
 
     public function processaRequisicao(): void
     {
-        //pegar dados do formulário 
+        //pegar dados do formulário e aplicando um filtro
 
-        //$dadosDoFormulario = $_POST//['nameDoCampoDoFormulario']
-        
+        $descricao = filter_input(
+            INPUT_POST,
+            'descricao',
+            FILTER_SANITIZE_STRING
+        );
+
         //montar modelos cursos 
         $curso = new Curso();
-        $curso->setDescricao($_POST['descricao']);
+        $curso->setDescricao($descricao);
         
         // Inserir no banco 
         $this->entityManager->persist($curso);
