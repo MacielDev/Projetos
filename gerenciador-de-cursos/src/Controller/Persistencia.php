@@ -27,17 +27,25 @@ class Persistencia implements InterfaceControladorRequisicao
             'descricao',
             FILTER_SANITIZE_STRING
         );
-
         //montar modelos cursos 
         $curso = new Curso();
         $curso->setDescricao($descricao);
 
-        // Inserir no banco 
-        $this->entityManager->persist($curso);
-        $this->entityManager->flush();
+        $id = filter_input(
+            INPUT_GET,
+            'id',
+            FILTER_VALIDATE_INT
+        );
 
+        if (!is_null($id) && $id !== false) {
+            $curso->setId($id);
+            $this->entityManager->merge($curso);
+        } else {
+            // Inserir no banco 
+            $this->entityManager->persist($curso);
+        }
+        $this->entityManager->flush();
         //UTILIZANDO UM CABEÇALHO PHP PARA REDIRECIONAR O BROWSER PARA OUTRA PÁGINA
-        echo "Curso $descricao salvo com sucesso";
         header('Location:/listar-cursos', true, 302);
     }
 }
