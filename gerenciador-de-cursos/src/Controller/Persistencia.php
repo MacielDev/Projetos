@@ -38,16 +38,20 @@ class Persistencia implements InterfaceControladorRequisicao
             FILTER_VALIDATE_INT
         );
 
+        $tipo = 'success';
         if (!is_null($id) && $id !== false) {
             $curso->setId($id);
             $this->entityManager->merge($curso);
-            $_SESSION['mensagem'] = 'Curso atualizado com sucesso';
+            $this->defineMensagem(
+                $tipo,
+                'Curso atualizado com sucesso');
+            
         } else {
             // Inserir no banco 
             $this->entityManager->persist($curso);
-            $_SESSION['mensagem'] = 'Curso criado com sucesso';
+            $this->defineMensagem($tipo,'Curso criado com sucesso');
         }
-        $_SESSION['tipo_mensagem'] = 'success';
+        
         
         $this->entityManager->flush();
         //UTILIZANDO UM CABEÇALHO PHP PARA REDIRECIONAR O BROWSER PARA OUTRA PÁGINA
