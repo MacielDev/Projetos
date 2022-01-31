@@ -5,7 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7Server\ServerRequestCreator;
-use Alura\Cursos\Controller\InterfaceControladorRequisicao;
+use Psr\Http\Server\RequestHandlerInterface;
 
 //temos o caminho 
 $caminho  = $_SERVER['PATH_INFO'];
@@ -18,13 +18,14 @@ if (!array_key_exists($caminho, $rotas)) {
     exit();
 }
 
-$ehRotaDeLogin = stripos($caminho,'login');
- //informando ao php que iremos utilizar a sessão
- session_start(); 
- if(!isset($_SESSION['logado']) && $ehRotaDeLogin === false){
-    header('Location:/login');exit(); 
- }
+//$ehRotaDeLogin = stripos($caminho,'login');
+ ////informando ao php que iremos utilizar a sessão
+ //session_start(); 
+ //if(!isset($_SESSION['logado']) && $ehRotaDeLogin === false){
+ //   header('Location:/login');exit(); 
+// }
 
+//Montando uma fabrica de requisições
  $psr17Factory = new Psr17Factory();
  $creator = new ServerRequestCreator(
      $psr17Factory, // ServerRequestFactory
@@ -32,23 +33,25 @@ $ehRotaDeLogin = stripos($caminho,'login');
      $psr17Factory, // UploadedFileFactory
      $psr17Factory // StreamFactory
  );
- 
- $serverRequest = $creator->fromGlobals();
+ //Utilizando as SuperGlobais (Get, Post, Server...) para gerara request
+ $request = $creator->fromGlobals();
 
 $classeControladora = $rotas[$caminho];
 /**
- * @var InterfaceControladorRequisicao $controlador
+ * @var RequestHandlerInterface $controlador
  */
 $controlador = new $classeControladora();
+//Fazendo a injeção de dependência em nosso método processaRequisição($request) , 
+$resposta = $controlador->handle($request);
 
-$resposta = $controlador->processaRequisicao($request);
-
-foreach($respostas->getHeaders() as $name=>$values){
+//Pegando todos os cabeçalhos retornados
+foreach($resposta->getHeaders() as $name=>$values){
+   //Percorrendo o valor de cada cabeçalho
    foreach($values as $value){
       header(sprintf('%s: %s', $name, $value),false);
    }
 }
-
+//Devolvendo o corpo de cada requisição
 echo $resposta->getBody();
 
 
