@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3d59527f0a6a36ec3b04ecc41cbf57bb6c84578e',
+        'reference' => 'f0536227cb9c40e523120f5dd183eb43be67d315',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3d59527f0a6a36ec3b04ecc41cbf57bb6c84578e',
+            'reference' => 'f0536227cb9c40e523120f5dd183eb43be67d315',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -110,12 +110,12 @@
             'dev_requirement' => false,
         ),
         'doctrine/orm' => array(
-            'pretty_version' => '2.11.0',
-            'version' => '2.11.0.0',
+            'pretty_version' => '2.11.1',
+            'version' => '2.11.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/orm',
             'aliases' => array(),
-            'reference' => 'bfed8cb6ed448f4ab1ea3fff06e4d6c44439e4ef',
+            'reference' => '4b88ce787d3916c8366abf52f6c658a7a27ed3a6',
             'dev_requirement' => false,
         ),
         'doctrine/persistence' => array(
