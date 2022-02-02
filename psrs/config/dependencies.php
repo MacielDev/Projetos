@@ -5,7 +5,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Alura\Cursos\Infra\EntityManagerCreator;
 
 //Criando o nosso container de dependencias
-$containnerBuilder = new ContainerBuilder();
+$containerBuilder = new ContainerBuilder();
 
 //Passando para o conatiner quais dependencias gostariamos de ser capazes de criar
 

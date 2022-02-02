@@ -18,13 +18,6 @@ if (!array_key_exists($caminho, $rotas)) {
     exit();
 }
 
-//$ehRotaDeLogin = stripos($caminho,'login');
- ////informando ao php que iremos utilizar a sessão
- //session_start(); 
- //if(!isset($_SESSION['logado']) && $ehRotaDeLogin === false){
- //   header('Location:/login');exit(); 
-// }
-
 //Montando uma fabrica de requisições
  $psr17Factory = new Psr17Factory();
  $creator = new ServerRequestCreator(
