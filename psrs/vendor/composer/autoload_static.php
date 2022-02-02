@@ -8,14 +8,16 @@ class ComposerStaticInit1745c1ea10e0170a5d9fb58d4c6ab071
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
+        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+        'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -45,6 +47,11 @@ class ComposerStaticInit1745c1ea10e0170a5d9fb58d4c6ab071
             'Psr\\Http\\Client\\' => 16,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
+            'PhpDocReader\\' => 13,
+        ),
+        'O' => 
+        array (
+            'Opis\\Closure\\' => 13,
         ),
         'N' => 
         array (
@@ -54,6 +61,10 @@ class ComposerStaticInit1745c1ea10e0170a5d9fb58d4c6ab071
         'L' => 
         array (
             'Laminas\\HttpHandlerRunner\\' => 26,
+        ),
+        'I' => 
+        array (
+            'Invoker\\' => 8,
         ),
         'H' => 
         array (
@@ -74,6 +85,7 @@ class ComposerStaticInit1745c1ea10e0170a5d9fb58d4c6ab071
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
+            'DI\\' => 3,
         ),
         'B' => 
         array (
@@ -171,6 +183,14 @@ class ComposerStaticInit1745c1ea10e0170a5d9fb58d4c6ab071
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
+        'PhpDocReader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-di/phpdoc-reader/src/PhpDocReader',
+        ),
+        'Opis\\Closure\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/opis/closure/src',
+        ),
         'Nyholm\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/nyholm/psr7/src',
@@ -182,6 +202,10 @@ class ComposerStaticInit1745c1ea10e0170a5d9fb58d4c6ab071
         'Laminas\\HttpHandlerRunner\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-httphandlerrunner/src',
+        ),
+        'Invoker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-di/invoker/src',
         ),
         'Http\\Promise\\' => 
         array (
@@ -240,6 +264,10 @@ class ComposerStaticInit1745c1ea10e0170a5d9fb58d4c6ab071
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
             1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
             2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
+        ),
+        'DI\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-di/php-di/src',
         ),
         'Buzz\\' => 
         array (

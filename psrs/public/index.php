@@ -37,10 +37,15 @@ if (!array_key_exists($caminho, $rotas)) {
  $request = $creator->fromGlobals();
 
 $classeControladora = $rotas[$caminho];
+
+//Chamando nosso container
+
+/**@var \Psr\Container\ContainerInterface $container */
+$container = require __DIR__ . '/../config/dependencies.php';
 /**
  * @var RequestHandlerInterface $controlador
  */
-$controlador = new $classeControladora();
+$controlador = $container->get($classeControladora);
 //Fazendo a injeção de dependência em nosso método processaRequisição($request) , 
 $resposta = $controlador->handle($request);
 
