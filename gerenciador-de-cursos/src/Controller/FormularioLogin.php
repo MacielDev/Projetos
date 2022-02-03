@@ -2,16 +2,20 @@
 
 namespace Alura\Cursos\Controller;
 
+use Nyholm\Psr7\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 use Alura\Cursos\Helper\RenderizadorDeHtmlTrait;
-use Alura\Cursos\Controller\InterfaceControladorRequisicao;
 
-class FormularioLogin implements InterfaceControladorRequisicao
+class FormularioLogin implements RequestHandlerInterface
 {
     use RenderizadorDeHtmlTrait;
-    public function processaRequisicao():void
+    public function handle(ServerRequestInterface $request):ResponseInterface
     {
-      echo $this->renderizaHtml('login/formulario.php',[
-          'titulo'=>'login'
-      ]);  
+      $html =$this->renderizaHtml('login/formulario.php',[
+        'titulo'=>'login'
+    ]);  
+      return new Response(200,[],$html);
     }
 }
