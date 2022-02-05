@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '4944a64a564fc6ea98f28a90734ebd8a562b136e',
+        'reference' => '7ffc01c0c8c1be46b5ef7004f1c908e82eb7530c',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '4944a64a564fc6ea98f28a90734ebd8a562b136e',
+            'reference' => '7ffc01c0c8c1be46b5ef7004f1c908e82eb7530c',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -146,12 +146,12 @@
             'dev_requirement' => false,
         ),
         'nyholm/psr7' => array(
-            'pretty_version' => '1.4.1',
-            'version' => '1.4.1.0',
+            'pretty_version' => '1.5.0',
+            'version' => '1.5.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nyholm/psr7',
             'aliases' => array(),
-            'reference' => '2212385b47153ea71b1c1b1374f8cb5e4f7892ec',
+            'reference' => '1461e07a0f2a975a52082ca3b769ca912b816226',
             'dev_requirement' => false,
         ),
         'nyholm/psr7-server' => array(

@@ -2,15 +2,18 @@
 
 namespace Alura\Cursos\Controller;
 
+use Psr\Http\Server\RequestHandlerInterface;
 use Nyholm\Psr7\Response;
+use Alura\Cursos\Helper\RenderizadorDeHtmlTrait;
+use Alura\Cursos\Helper\FlashMessageTrait;
 use Alura\Cursos\Entity\Curso;
 use Psr\Http\Message\ResponseInterface;
 use Doctrine\ORM\EntityManagerInterface;
-use Alura\Cursos\Helper\FlashMessageTrait;
+
 use Psr\Http\Message\ServerRequestInterface;
 
-use Psr\Http\Server\RequestHandlerInterface;
-use Alura\Cursos\Helper\RenderizadorDeHtmlTrait;
+
+
 
 class FormularioEdicao implements RequestHandlerInterface
 {
@@ -40,7 +43,7 @@ class FormularioEdicao implements RequestHandlerInterface
         }
 
         $curso = $this->repositorioCursos->find($id);
-        $html = $this->renderizaHtml('curso/formulario.php',[
+        $html = $this->renderizaHtml('cursos/formulario.php',[
             'curso' => $curso,
             'titulo' => 'Alterar curso' .$curso->getDescricao()
         ]);
