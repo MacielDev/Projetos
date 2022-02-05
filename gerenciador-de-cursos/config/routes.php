@@ -18,5 +18,6 @@ return [
     '/alterar-curso'=> FormularioEdicao::class,
     '/login'=> FormularioLogin::class,
     '/realiza-login'=>RealizarLogin::class,
-    '/logout'=>Deslogar::class
+    '/logout'=>Deslogar::class,
+    'cursos-em-json' =>CursosEmJson::class 
 ];
