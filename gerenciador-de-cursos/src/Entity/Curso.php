@@ -2,6 +2,8 @@
 
 namespace Alura\Cursos\Entity;
 
+use JsonSerializable;
+
 /**
  * @Entity
  * @Table(name="cursos")
