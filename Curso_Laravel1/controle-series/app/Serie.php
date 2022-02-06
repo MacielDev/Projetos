@@ -6,5 +6,7 @@ class Serie extends Model
 {
     //Informamos o nome da tabela que a Model deverá se relacionar
     protected $table = 'series';
-    
+    protected $fillable = [
+        'nome'
+    ];
 }

@@ -9,7 +9,7 @@ Séries
 
         <ul class="list-group">
             @foreach ($series as $serie)
-            <li class="list-group-item">{{$serie}}
+            <li class="list-group-item">{{ $serie->nome }}
                 <span>
                     <a href="#" class="btn btn-info">Editar</a>
                     <a href="#" class="btn btn-danger">Excluir</a>
