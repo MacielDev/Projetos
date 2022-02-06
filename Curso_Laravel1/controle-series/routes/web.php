@@ -10,3 +10,7 @@ Route::get(
     '/series/criar',
     'App\Http\Controllers\SeriesController@create'
 );
+
+Route::post(
+    '/series/criar','App\Http\Controllers\SeriesController@store'
+);
