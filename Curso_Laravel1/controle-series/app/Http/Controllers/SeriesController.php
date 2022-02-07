@@ -24,8 +24,19 @@ class SeriesController extends Controller
         $request->session()
             ->flash(
                 'mensagem',
-                "Série com id {$serie->id} criada: {$serie->nome}"
+                "Série com id {$serie->id} criada {$serie->nome}"
             );
-        return redirect('/series');
+        return redirect()->route('listar_series');
+    }
+    public function destroy(Request $request)
+    {
+        $id = $request->id;
+        Serie::destroy($id);
+        $request->session()
+        ->flash(
+            'mensagem',
+            "Série excluida com sucesso"
+        );
+        return redirect()->route('listar_series');
     }
 }
