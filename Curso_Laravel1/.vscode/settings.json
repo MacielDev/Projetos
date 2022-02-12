@@ -1,0 +1,12 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "CursoLaravel1_base",
+            "group": "CursoLaravel1_base",
+            "database": "database.sqlite"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
