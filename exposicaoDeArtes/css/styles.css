@@ -1,0 +1,38 @@
+/*ESTILOS GERAIS*/
+
+* {
+    color: #25282e
+}
+
+a,
+i {
+    transition: .5s;
+    text-decoration: none;
+}
+
+.secundary-color {
+    color: #555;
+}
+
+.center-image {
+    background-size: cover;
+    background-position: center;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #25282E;
+    color: #FFF;
+    padding: 7px 18px;
+    border-radius: 0;
+}
+
+.btn:hover {
+    background-color: #333333;
+    color: #FFF;
+}
+
+
+/*HEADER*/
+
+#logo-container {}
