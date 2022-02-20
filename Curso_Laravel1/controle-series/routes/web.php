@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+
 // Coloquei um comentario
 Route::get(
     '/series',
