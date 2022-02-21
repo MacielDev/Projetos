@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 
-// Coloquei um comentario
 Route::get(
     '/series',
     'App\Http\Controllers\SeriesController@index'
