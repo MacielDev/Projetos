@@ -1,12 +1,18 @@
 <?php
-namespace App;
+namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model;
 
-class Serie extends Model 
+class Serie extends Model
 {
     //Informamos o nome da tabela que a Model deverá se relacionar
     protected $table = 'series';
     protected $fillable = [
         'nome'
     ];
+
+    public function temporadas()
+    {
+        return $this->hasMany(Temporada::class);
+    }
 }

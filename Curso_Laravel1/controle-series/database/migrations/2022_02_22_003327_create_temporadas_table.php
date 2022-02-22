@@ -15,6 +15,13 @@ class CreateTemporadasTable extends Migration
     {
         Schema::create('temporadas', function (Blueprint $table) {
             $table->id();
+            $table->integer('numero');
+            $table->integer('serie_id');
+            $table->integer('episodio_id');
+
+            $table->foreign('serie_id')->references('id')->on('series');
+            $table->foreign('episodio_id')->references('id')->on('episodios');
+
             $table->timestamps();
         });
     }

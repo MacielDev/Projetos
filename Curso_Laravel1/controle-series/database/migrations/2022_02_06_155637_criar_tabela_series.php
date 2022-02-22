@@ -16,6 +16,8 @@ class CriarTabelaSeries extends Migration
         Schema::create('series',function(Blueprint $table){
             $table->increments('id');
             $table->string('nome');
+            $table->integer('temporada_id');
+            $table->foreign('temporada_id')->references('id')->on('temporadas');
             $table->timestamps();
         });
     }

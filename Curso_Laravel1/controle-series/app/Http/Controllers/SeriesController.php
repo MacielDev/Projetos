@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Serie;
+
+use App\Models\Serie;
 use Illuminate\Http\Request;
 use App\Http\Requests\SeriesFormRequest;
 
@@ -12,7 +13,7 @@ class SeriesController extends Controller
     function index(Request $request)
     {
         $series = Serie::all();
-        $mensagem = $request->session()->get('mensagem'); 
+        $mensagem = $request->session()->get('mensagem');
         return view('series.index', compact('series','mensagem'));
     }
     public function create()
@@ -21,7 +22,7 @@ class SeriesController extends Controller
     }
     public function store(SeriesFormRequest $request)
     {
-        
+
         $serie = Serie::create($request->all());
         $request->session()
             ->flash(
