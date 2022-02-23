@@ -8,6 +8,7 @@ use App\Models\Episodio;
 use App\Models\Temporada;
 use Illuminate\Http\Request;
 use App\Services\CriadorDeSeries;
+use App\Services\RemovedorDeSeries;
 use App\Http\Requests\SeriesFormRequest;
 
 class SeriesController extends Controller
@@ -36,24 +37,14 @@ class SeriesController extends Controller
             );
         return redirect()->route('listar_series');
     }
-    public function destroy(Request $request)
+    public function destroy(Request $request, RemovedorDeSeries $removedorDeSeries)
     {
-        $serie = Serie::find($request->id);
-        $nome = $serie->nome;
-
-        /**Código para deletar 1º)episódios/ 2º)temporadas/ 3º)serie */
-       $serie->temporadas->each(function(Temporada $temporada){
-            $temporada->episodios->each(function(Episodio $episodio){
-                $episodio->delete();
-            });
-            $temporada->delete();
-       });
-       $serie->delete();
+        $nomeSerie = $removedorDeSeries->removerSerie($request->id);
 
         $request->session()
             ->flash(
                 'mensagem',
-                "Série {$nome} excluida com sucesso"
+                "Série  {$nomeSerie}  excluida com sucesso"
             );
         return redirect()->route('listar_series');
     }
