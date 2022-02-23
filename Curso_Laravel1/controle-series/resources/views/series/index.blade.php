@@ -14,11 +14,11 @@ Séries
     @foreach ($series as $serie)
     <li class="list-group-item  d-flex justify-content-between align-items-center">{{ $serie->nome }}
         <span class="d-flex flex-row">
-            <a href="#" class="btn btn-info btn-sm">Editar</a>
+            <a href="#" class="btn btn-info btn-sm"><i class="bi bi-pencil"></i></a>
             <form method="post" action="/series/remover/{{$serie->id}}">
                 @csrf
                 @method('DELETE')
-                <button href="#" class="btn btn-danger btn-sm">Excluir</button>
+                <button href="#" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
             </form>
         </span>
     </li>

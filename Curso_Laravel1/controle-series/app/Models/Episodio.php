@@ -10,7 +10,8 @@ class Episodio extends Model
     use HasFactory;
     protected $table = 'episodios';
     protected $fillable =[
-
+        'numero',
+        'temporada_id'
     ];
     public function temporadas()
     {

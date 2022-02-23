@@ -9,8 +9,9 @@ class Temporada extends Model
 {
     use HasFactory;
     protected $table = 'temporadas';
-    protected $filable = [
-
+    protected $fillable = [
+        'serie_id',
+        'numero'
     ];
 
     public function episodios()
