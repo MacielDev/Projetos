@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Serie;
+use App\Models\Episodio;
+use App\Models\Temporada;
 use Illuminate\Http\Request;
+use App\Services\CriadorDeSeries;
 use App\Http\Requests\SeriesFormRequest;
-
 
 class SeriesController extends Controller
 {
@@ -20,16 +22,13 @@ class SeriesController extends Controller
     {
         return view('series.create');
     }
-    public function store(SeriesFormRequest $request)
+    public function store(SeriesFormRequest $request, CriadorDeSeries $criadorDeSeries)
     {
-        $serie = Serie::create(['nome' => $request->nome]);
-        $qtdTemporadas = $request->qtd_temporadas;
-        for ($i = 1; $i <= $qtdTemporadas; $i++) {
-            $temporada = $serie->temporadas()->create(['numero' => $i]);
-            for ($j = 1; $j <= $request->ep_por_temporada; $j++) {
-                $temporada->episodios()->create(['numero' => $j]);
-            }
-        }
+        $serie = $criadorDeSeries->criarSerie(
+            $request->nome,
+            $request->qtd_temporadas,
+            $request->ep_por_temporada
+        );
         $request->session()
             ->flash(
                 'mensagem',
@@ -39,12 +38,22 @@ class SeriesController extends Controller
     }
     public function destroy(Request $request)
     {
-        $id = $request->id;
-        Serie::destroy($id);
+        $serie = Serie::find($request->id);
+        $nome = $serie->nome;
+
+        /**Código para deletar 1º)episódios/ 2º)temporadas/ 3º)serie */
+       $serie->temporadas->each(function(Temporada $temporada){
+            $temporada->episodios->each(function(Episodio $episodio){
+                $episodio->delete();
+            });
+            $temporada->delete();
+       });
+       $serie->delete();
+
         $request->session()
             ->flash(
                 'mensagem',
-                "Série excluida com sucesso"
+                "Série {$nome} excluida com sucesso"
             );
         return redirect()->route('listar_series');
     }
