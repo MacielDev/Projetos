@@ -33,10 +33,19 @@ class SeriesController extends Controller
         $request->session()
             ->flash(
                 'mensagem',
-                "Série com id {$serie->id} e suas temporadas e episódios foram criados com sucesso {$serie->nome}"
+                "Série com id {$serie->nome} e suas temporadas e episódios foram criados com sucesso"
             );
         return redirect()->route('listar_series');
     }
+
+    public function editaNome(int $serieId, Request $request)
+    {
+        $novoNome = $request->nome;
+        $serie=Serie::find($serieId);
+        $serie->nome = $novoNome;
+        $serie->save();
+    }
+
     public function destroy(Request $request, RemovedorDeSeries $removedorDeSeries)
     {
         $nomeSerie = $removedorDeSeries->removerSerie($request->id);
