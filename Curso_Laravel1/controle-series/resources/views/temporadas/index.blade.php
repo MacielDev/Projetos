@@ -8,7 +8,7 @@
     <ul class="list-group theme-dark">
         @foreach ($temporadas as $temporada)
             <li class="list-group-item d-flex align-items-center justify-content-between">
-                <a href="/series/{{ $temporada->id }}/episodios">
+                <a href="/temporadas/{{ $temporada->id }}/episodios">
                     Temporada{{ $temporada->numero }}
                 </a>
                 <span class="badge badge-secondary">

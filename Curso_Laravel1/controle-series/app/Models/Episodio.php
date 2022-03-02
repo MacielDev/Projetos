@@ -12,6 +12,7 @@ class Episodio extends Model
     protected $fillable =[
         'numero',
         'temporada_id',
+        'assistido'
 
     ];
     public function temporadas()

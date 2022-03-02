@@ -8,9 +8,8 @@ use Illuminate\Http\Request;
 
 class EpisodiosController extends Controller
 {
-    public function index(int $temporadaId)
+    public function index(Temporada $temporada, Request $request)
     {
-        $temporada = Temporada::find($temporadaId);
         $episodios = $temporada -> episodios;
         $temporadaId = $temporada -> id;
 
@@ -18,10 +17,12 @@ class EpisodiosController extends Controller
     }
     public function assistir(Temporada $temporada, Request $request)
     {
+        $idEpisodiosAssistidos = array_keys($request->episodios);
         $episodiosAssistidos = $request->episodios;
-        $temporada->episodios->each(function(Episodio $episodio) use($episodiosAssistidos){
-            $episodio->assistido->in_array($episodio->id,$episodiosAssistidos);
+        $temporada->episodios->each(function(Episodio $episodio) use($idEpisodiosAssistidos){
+            $episodio->assistido = in_array($episodio->id,$idEpisodiosAssistidos);
         });
         $temporada->push();
+        return redirect()->back();
     }
 }
