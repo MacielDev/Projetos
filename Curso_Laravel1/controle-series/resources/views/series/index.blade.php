@@ -5,9 +5,7 @@
 @endsection
 
 @section('conteudo')
-    @if (!empty($mensagem))
-        <div class="alert alert-success p-md-4" role="alert">{{ $mensagem }}</div>
-    @endif
+    @include('mensagem')
     <a href="{{ route('form_criar_serie') }}" class="btn btn-dark btn-lg mb-1">Adicionar</a>
 
     <ul class="list-group">

@@ -5,13 +5,15 @@
 @endsection
 
 @section('conteudo')
+    @include('mensagem')
     <form action="/temporadas/{{ $temporadaId }}/episodios/assistir" method="post">
         @csrf
         <ul class="list-group theme-dark">
             @foreach ($episodios as $episodio)
                 <li class="list-group-item d-flex align-items-center justify-content-between">
                     Episódio {{ $episodio->numero }}
-                    <input type="checkbox" name="episodios[{{ $episodio->id }}][assistido]" {{ $episodio->assistido ? 'checked' : '' }}>
+                    <input type="checkbox" name="episodios[]" value="{{ $episodio->id }}"
+                        {{ $episodio->assistido ? 'checked' : '' }}>
                 </li>
             @endforeach
         </ul>
