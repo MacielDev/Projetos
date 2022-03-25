@@ -8,7 +8,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');  // HomeController
 
+/** ROTAS PARA ALTENTICAÇÃO - PERSONALIZADAS **/
 
+Route::get('/entrar','App\Http\Controllers\EntrarController@index');
+Route::post('/entrar','App\Http\Controllers\EntrarController@entrar');
 
 /** ROTAS PARA O INDEX DO SISTEMA - lISTAR SERIES **/
 Route::get(
@@ -18,7 +21,7 @@ Route::get(
 
 /** ROTAS PARA CRUD COMPLETO ----> CRIAR/DELETAR/EDITAR  **/
 
-/** ROTA PARA CRIAR SÉRIE **/
+/****************************** ROTA PARA CRIAR SÉRIE *************************************/
 
 /** FORMULÁRIO DE CRIAÇÃO **/
 Route::get(
