@@ -9,10 +9,16 @@ use App\Models\Temporada;
 use Illuminate\Http\Request;
 use App\Services\CriadorDeSeries;
 use App\Services\RemovedorDeSeries;
+// use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\SeriesFormRequest;
 
 class SeriesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     function index(Request $request)
     {
         $series = Serie::all();
