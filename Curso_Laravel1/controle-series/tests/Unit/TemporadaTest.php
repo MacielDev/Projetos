@@ -4,7 +4,15 @@ namespace Tests\Unit;
 
 use App\Models\Episodio;
 use App\Models\Temporada;
-use PHPUnit\Framework\TestCase;
+/*
+Ao criarmos o nosso teste utilizando o conmando php artisan make:test --unit , O Laravel nos devolve a classe de testes com o seguinte    =======>   use PHPUnit\Framework\TestCase;
+
+Porem eu estava recebendo o seguinte erro: Fatal error: Uncaught Error: Call to a member function connection() on null in E:\projects\try\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:1013
+
+A solucao encontrada foi , utilizar     =====>    use Tests\TestCase
+
+*/
+use Tests\TestCase;
 
 class TemporadaTest extends TestCase
 {
