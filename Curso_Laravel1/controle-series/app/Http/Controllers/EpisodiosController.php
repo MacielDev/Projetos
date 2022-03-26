@@ -25,6 +25,6 @@ class EpisodiosController extends Controller
         });
         $temporada->push();
         $request->session()->flash('mensagem', 'Episodios marcados como assistidos');
-        return redirect()->back();
+        return redirect('/temporadas/'.$temporada->id.'/episodios');
     }
 }

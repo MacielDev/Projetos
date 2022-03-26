@@ -15,10 +15,6 @@ use App\Http\Requests\SeriesFormRequest;
 class SeriesController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     function index(Request $request)
     {
         $series = Serie::all();

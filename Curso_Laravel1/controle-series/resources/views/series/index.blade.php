@@ -25,15 +25,17 @@
                 <span class="d-flex flex-row">
                     <a href="/series/{{ $serie->id }}/temporadas" class="mr-1 btn btn-info btn-sm"><i
                             class="bi bi-box-arrow-in-up-right"></i></a>
-
-                    <button onclick="toggleInput({{ $serie->id }})" class="btn btn-success btn-sm"><i
-                            class="bi bi-pencil"></i></button>
-
-                    <form method="post" action="/series/remover/{{ $serie->id }}">
-                        @csrf
-                        @method('DELETE')
-                        <button href="#" class="ml-1 btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
-                    </form>
+                    @auth
+                        <button onclick="toggleInput({{ $serie->id }})" class="btn btn-success btn-sm"><i
+                                class="bi bi-pencil"></i></button>
+                    @endauth
+                    @auth
+                        <form method="post" action="/series/remover/{{ $serie->id }}">
+                            @csrf
+                            @method('DELETE')
+                            <button href="#" class="ml-1 btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                        </form>
+                    @endauth
                 </span>
             </li>
         @endforeach
