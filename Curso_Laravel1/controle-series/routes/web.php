@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+
 /** ROTAS PARA AUTENTICAÇÃO PADRÃO DO lARAVEL **/
 Auth::routes();
 
@@ -36,30 +37,30 @@ Route::get(
 Route::get(
     '/series/criar',
     'App\Http\Controllers\SeriesController@create'
-)->name('form_criar_serie')->middleware('auth');
+)->name('form_criar_serie')->middleware('autenticador');
 
 
 /** SALVAR SERIE -----> STORE **/
 Route::post(
     '/series/criar',
     'App\Http\Controllers\SeriesController@store'
-)->middleware('auth');
+)->middleware('autenticador');
 
 /** ROTA PARA DELETAR SÉRIE **/
 Route::delete(
     '/series/remover/{id}',
     'App\Http\Controllers\SeriesController@destroy'
-)->middleware('auth');
+)->middleware('autenticador');
 
 /** ROTA PARA EDITAR SÉRIE **/
-Route::post('/series/{serieId}/editaNome','App\Http\Controllers\SeriesController@editaNome')->middleware('auth');
+Route::post('/series/{serieId}/editaNome','App\Http\Controllers\SeriesController@editaNome')->middleware('autenticador');
 
 Route::get('/series/{serieId}/temporadas','App\Http\Controllers\TemporadasController@index')->name('temporadas');
 
 Route::get('/temporadas/{temporada}/episodios','App\Http\Controllers\EpisodiosController@index');
 
 /**ROTA PARA MARCAR OS EPISÓDIOS JÁ ASSISTIDOS POR TEMPORADAS **/
-Route::post('/temporadas/{temporada}/episodios/assistir','App\Http\Controllers\EpisodiosController@assistir')->middleware('auth');
+Route::post('/temporadas/{temporada}/episodios/assistir','App\Http\Controllers\EpisodiosController@assistir')->middleware('autenticador');
 
 
 
