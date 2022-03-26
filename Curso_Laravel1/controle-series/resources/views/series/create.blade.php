@@ -5,15 +5,7 @@
 @endsection
 
 @section('conteudo')
-    @if ($errors->any())
-        <div class="alert alert-danger">
-
-            @foreach ($errors->all() as $error)
-                <div>{{ $error }}</div>
-            @endforeach
-
-        </div>
-    @endif
+    @include('errors',['errors'=>$errors])
     <form method="post" action="/series/criar">
         @csrf
         <div class="row">
