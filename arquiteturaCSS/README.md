@@ -8,3 +8,4 @@
 
 <h2>Metodologia</h2>
 <p>=> Atomic Design</p>
+<p>=> BEM</p>
