@@ -1,5 +1,6 @@
 .banner__titulo {
     text-align: center;
+    width: 100%;
     font-family: Pacifico, cursive;
     font-size: 5.0625rem;
     position: absolute;
