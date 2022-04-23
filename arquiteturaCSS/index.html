@@ -7,26 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fruta & Fruto</title>
+
+    <!-- normalize e reset css -->
     <link href="./assets/css/normalize.css" rel="stylesheet" />
     <link href="./assets/css/reset.css" rel="stylesheet" />
+
+    <!-- Cabeçalho -->
     <link rel="stylesheet" href="./assets/css/cabecalho.css">
+
+    <!-- menu -->
     <link href="./assets/css/menu/menu-item.css" rel="stylesheet">
     <link href="./assets/css/menu/menu-link.css" rel="stylesheet">
     <link href="./assets/css/menu/menu-lista.css" rel="stylesheet">
+
+    <!-- Banner -->
+    <link rel="stylesheet" href="./assets/css/banner/banner.css">
+    <link rel="stylesheet" href="./assets/css/banner/banner-imagem.css">
+    <link rel="stylesheet" href="./assets/css/banner/banner-titulo.css">
+
+    <!-- Sobre -->
+    <link rel="stylesheet" href="./assets/css/sobre/sobre.css">
+    <link rel="stylesheet" href="./assets/css/sobre/sobre-titulo.css">
+    <link rel="stylesheet" href="./assets/css/sobre/sobre-descricao.css">
 </head>
 
 <body>
     <header class="cabecalho">
         <img class="logo" src="./assets/img/logo.jpg" alt="Logo Fruta e Fruto">
         <nav class="menu ">
-            <ul class="menu-lista">
-                <li class="menu-item"><a class="menu-link ativo" href="#">Início</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Receitas</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Quem Somos</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Comunidade</a></li>
+            <ul class="menu__lista">
+                <li class="menu__item"><a class="menu__link ativo" href="#">Início</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Receitas</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Quem Somos</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Comunidade</a></li>
             </ul>
         </nav>
     </header>
+    <section class="banner">
+        <img src="./assets/img/banner.jpg" alt="banner-pagina" class="banner__imagem">
+        <h2 class="banner__titulo">Reaproveite melhor os alimentos</h2>
+    </section>
+    <section class="sobre">
+        <h2 class="sobre__titulo">Receitas para economizar e ganhar saúde</h2>
+        <p class="sobre__descricao">Nossas receitas ajudam voce a aproveitar melhor os alimentos, economizar, ganhar tempo e praticidade</p>
+    </section>
+    <section>
+        <div class="receita">
+            <img src="./assets/img/receitas/beterrabas-assadas.jpg" alt="beterrabas-assadas" class="receita__imagem">
+            <h4 class="receita__titulo"></h4>
+            <p class="receita__descricao"></p>
+            <button class="receita__botao"></button>
+        </div>
+        <div class="receita">
+            <img src="./assets/img/receitas/mix-de-vegetais.jpg" alt="mix-de-vegetais" class="receita__imagem">
+            <h4 class="receita__titulo"></h4>
+            <p class="receita__descricao"></p>
+            <button class="receita__botao"></button>
+        </div>
+        <div class="receita">
+            <img src="./assets/img/receitas/pimentoes-a-juliana.jpg" alt="pimentoes-a-juliana" class="receita__imagem">
+            <h4 class="receita__titulo"></h4>
+            <p class="receita__descricao"></p>
+            <button class="receita__botao"></button>
+        </div>
+        <div class="receita">
+            <img src="./assets/img/receitas/prato-oriental.jpg" alt="prato-oriental" class="receita__imagem">
+            <h4 class="receita__titulo"></h4>
+            <p class="receita__descricao"></p>
+            <button class="receita__botao"></button>
+        </div>
+        <div class="receita">
+            <img src="./assets/img/receitas/salada-de-kiwi.jpg" alt="salada-de-kiwi" class="receita__imagem">
+            <h4 class="receita__titulo"></h4>
+            <p class="receita__descricao"></p>
+            <button class="receita__botao"></button>
+        </div>
+        <div class="receita">
+            <img src="./assets/img/receitas/tigela-de-abacate.jpg" alt="tigela-de-abacate" class="receita__imagem">
+            <h4 class="receita__titulo"></h4>
+            <p class="receita__descricao"></p>
+            <button class="receita__botao"></button>
+        </div>
+    </section>
 </body>
 
 </html>
