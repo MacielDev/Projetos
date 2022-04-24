@@ -1,7 +1,7 @@
 .receita__titulo {
     color: #000;
-    text-align: left;
     font-size: 1.4375em;
     font-family: Roboto;
+    text-align: left;
     padding: 1rem 0.5rem 0.5rem 1rem;
 }

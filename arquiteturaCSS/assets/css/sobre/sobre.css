@@ -1,4 +1,24 @@
 .sobre {
     text-align: center;
-    padding: 3rem;
+}
+
+
+/* RESPONSIVO */
+
+
+/* CELULAR */
+
+@media screen and (min-width:0) {
+    .sobre {
+        padding: 2.5rem 1rem;
+    }
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width:768) {
+    .sobre {
+        padding: 3rem;
+    }
 }

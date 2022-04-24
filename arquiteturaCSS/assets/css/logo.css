@@ -1,0 +1,16 @@
+/* CELULAR */
+
+@media screen and (min-width:0) {
+    .logo {
+        display: none;
+    }
+}
+
+
+/* Tablet  */
+
+@media screen and (min-width:768px) {
+    .logo {
+        display: block;
+    }
+}

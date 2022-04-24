@@ -1,6 +1,23 @@
 .pessoas {
-    padding-top: 3rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    padding-top: 3rem;
+}
+
+
+/* CELULAR */
+
+@media screen and (min-width:0) {
+    .pessoas {
+        flex-direction: column;
+    }
+}
+
+
+/* TABLET */
+
+@media screen and (min-width:768px) {
+    .pessoas {
+        flex-direction: row;
+    }
 }

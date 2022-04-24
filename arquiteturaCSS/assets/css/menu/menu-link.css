@@ -1,8 +1,8 @@
 .menu__link {
-    text-decoration: none;
-    text-transform: lowercase;
     color: #808080;
     margin-right: 1.25em;
+    text-decoration: none;
+    text-transform: lowercase;
 }
 
 .menu__link.ativo {

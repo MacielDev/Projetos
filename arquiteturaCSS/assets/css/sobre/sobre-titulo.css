@@ -1,5 +1,25 @@
 .sobre__titulo {
     font-family: Pacifico, cursive;
     color: #8D0606;
-    font-size: 3.1875rem;
+}
+
+
+/* RESPONSIVO */
+
+
+/* CELULAR */
+
+@media screen and (min-width:0) {
+    .sobre__titulo {
+        font-size: 2rem;
+    }
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width:768px) {
+    .sobre__titulo {
+        font-size: 3.1875rem;
+    }
 }
