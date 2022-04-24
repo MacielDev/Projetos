@@ -2,6 +2,7 @@
     background: #fdfdfd;
     display: flex;
     flex-direction: column;
+    /* TIRANDO O ESPAÇAMENTO A MAIS QUE ESTAVA À DIREITA */
     width: calc(25% - 5rem);
     margin-bottom: 5rem;
     margin-right: 5rem

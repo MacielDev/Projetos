@@ -8,29 +8,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fruta & Fruto</title>
 
-    <!-- normalize e reset css -->
+    <!-- NORMALIZE E RESET CSS -->
+
     <link href="./assets/css/normalize.css" rel="stylesheet" />
     <link href="./assets/css/reset.css" rel="stylesheet" />
 
-    <!-- Cabeçalho -->
+    <!-- CABECALHO -->
+
     <link rel="stylesheet" href="./assets/css/cabecalho.css">
 
-    <!-- menu -->
+    <!-- MENU -->
+
     <link href="./assets/css/menu/menu-item.css" rel="stylesheet">
     <link href="./assets/css/menu/menu-link.css" rel="stylesheet">
     <link href="./assets/css/menu/menu-lista.css" rel="stylesheet">
 
-    <!-- Banner -->
+    <!-- BANNER -->
+
     <link rel="stylesheet" href="./assets/css/banner/banner.css">
     <link rel="stylesheet" href="./assets/css/banner/banner-imagem.css">
     <link rel="stylesheet" href="./assets/css/banner/banner-titulo.css">
 
-    <!-- Sobre -->
+    <!-- SOBRE -->
+
     <link rel="stylesheet" href="./assets/css/sobre/sobre.css">
     <link rel="stylesheet" href="./assets/css/sobre/sobre-titulo.css">
     <link rel="stylesheet" href="./assets/css/sobre/sobre-descricao.css">
 
-    <!-- receitas -->
+    <!-- RECEITAS -->
+
     <link rel="stylesheet" href="./assets/css/receitas/receitas.css">
     <link rel="stylesheet" href="./assets/css/receitas/receita.css">
     <link rel="stylesheet" href="./assets/css/receitas/receita-imagem.css">
@@ -38,9 +44,23 @@
     <link rel="stylesheet" href="./assets/css/receitas/receita-descricao.css">
     <link rel="stylesheet" href="./assets/css/receitas/receita-botao.css">
     <link rel="stylesheet" href="./assets/css/receitas/receita-conteudo.css">
+
+    <!-- QUEM SOMOS  -->
+
+    <link rel="stylesheet" href="./assets/css/quem-somos/quem-somos.css">
+    <link rel="stylesheet" href="./assets/css/quem-somos/quem-somos-titulo.css">
+    <link rel="stylesheet" href="./assets/css/quem-somos/quem-somos-descricao.css">
+    <link rel="stylesheet" href="./assets/css/quem-somos/pessoas.css">
+    <link rel="stylesheet" href="./assets/css/quem-somos/pessoa.css">
+    <link rel="stylesheet" href="./assets/css/quem-somos/pessoa-nome.css">
+    <link rel="stylesheet" href="./assets/css/quem-somos/pessoa-imagem.css">
+    <link rel="stylesheet" href="./assets/css/quem-somos/pessoa-funcao.css">
 </head>
 
 <body>
+
+    <!-- HEADER -->
+
     <header class="cabecalho">
         <img class="logo" src="./assets/img/logo.jpg" alt="Logo Fruta e Fruto">
         <nav class="menu ">
@@ -52,6 +72,9 @@
             </ul>
         </nav>
     </header>
+
+    <!-- BANNER -->
+
     <section class="banner">
         <img src="./assets/img/banner.jpg" alt="banner-pagina" class="banner__imagem">
         <h2 class="banner__titulo">Reaproveite melhor os alimentos</h2>
@@ -60,6 +83,9 @@
         <h2 class="sobre__titulo">Receitas para economizar e ganhar saúde</h2>
         <p class="sobre__descricao">Nossas receitas ajudam voce a aproveitar melhor os alimentos, economizar, ganhar tempo e praticidade</p>
     </section>
+
+    <!-- RECEITAS -->
+
     <section class="receitas">
         <div class="receita">
             <img src="./assets/img/receitas/tigela-de-abacate.jpg" alt="tigela-de-abacate" class="receita__imagem">
@@ -112,6 +138,30 @@
                 <button class="receita__botao">Ver receita</button>
             </div>
         </div>
+        </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+
+    <section class="quem-somos">
+        <h2 class="quem-somos__titulo">Quem somos</h2>
+        <p class="quem-somos__descricao">Conheça a comunidade pos trás da iniciativa</p>
+        <div class="pessoas">
+            <div class="pessoa">
+                <span class="pessoa__imagem pessoa__imagem--roberta"></span>
+                <span class="pessoa__nome">Roberta</span>
+                <span class="pessoa__funcao">Conteúdo</span>
+            </div>
+            <div class="pessoa">
+                <span class="pessoa__imagem pessoa__imagem--marcela"></span>
+                <span class="pessoa__nome">Marcela</span>
+                <span class="pessoa__funcao">Chef de cozinha</span>
+            </div>
+            <div class="pessoa">
+                <span class="pessoa__imagem pessoa__imagem--andreia"></span>
+                <span class="pessoa__nome">Andréia</span>
+                <span class="pessoa__funcao">Pequena produtora</span>
+            </div>
         </div>
     </section>
 </body>
