@@ -1,0 +1,39 @@
+@import url("../settings.css");
+.principal {
+    align-items: center;
+    background-image: url("../../img/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+}
+
+.principal__content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-left: 3.375em;
+    /* border: 1px solid #fff; */
+}
+
+.principal__title {
+    font-size: 28px;
+    margin-bottom: 1em;
+}
+
+.principal__image {
+    align-self: center;
+    margin-bottom: 2em;
+    width: 348px;
+    height: 100px;
+}
+
+.principal__button {
+    margin-bottom: 0.5em;
+    padding: 1em 0;
+    border-radius: 5px;
+}
+
+.principal__description {
+    font-size: 12px;
+    color: var(--color-descriptions);
+}

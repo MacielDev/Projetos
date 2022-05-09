@@ -1,0 +1,36 @@
+@import url("./settings.css");
+body {
+    background-color: var(--background-site);
+    color: var(--color--principal);
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* SECTIONS CONTAINER */
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    align-items: center;
+}
+
+
+/* BUTTONS */
+
+.btn-transparent {
+    background-color: var(--transparent-button);
+    color: var(--color-transparent-button);
+    border: solid 2px var(--color-secundary-button);
+}
+
+.btn-blue {
+    background-color: var(--color-secundary-button);
+    color: var(--color-principal);
+}
