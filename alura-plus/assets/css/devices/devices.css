@@ -1,0 +1,18 @@
+.devices {
+    box-sizing: border-box;
+    display: flex;
+    margin: 0 6em;
+    justify-content: space-around;
+}
+
+.device__content {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    margin: 0 1em;
+    align-self: center;
+}
+
+.device__name {
+    text-align: center;
+}

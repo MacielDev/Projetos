@@ -1,15 +1,29 @@
 @import url("../settings.css");
 .secundary {
     align-items: center;
+    margin: 0 6em;
+    box-sizing: border-box;
 }
 
 .secundary__content {}
 
-.secundary__image {}
+.secundary__image {
+    width: 80%;
+    text-align: center;
+    margin-left: 3em;
+}
 
 .secundary__title {
-    font-size: 48px;
+    font-size: 35px;
     font-weight: 700;
 }
 
-.secundary__description {}
+.secundary__description {
+    color: var(--secudary-description);
+    margin-bottom: 2em;
+}
+
+.secundary__button {
+    padding: 1em;
+    border-radius: 4px;
+}
