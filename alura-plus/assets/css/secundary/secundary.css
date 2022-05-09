@@ -1,16 +1,16 @@
 @import url("../settings.css");
 .secundary {
     align-items: center;
-    margin: 0 6em;
     box-sizing: border-box;
+    margin: 0 6em;
 }
 
 .secundary__content {}
 
 .secundary__image {
-    width: 80%;
-    text-align: center;
     margin-left: 3em;
+    text-align: center;
+    width: 80%;
 }
 
 .secundary__title {
@@ -19,11 +19,11 @@
 }
 
 .secundary__description {
-    color: var(--secudary-description);
+    color: var(--color-descriptions);
     margin-bottom: 2em;
 }
 
 .secundary__button {
-    padding: 1em;
     border-radius: 4px;
+    padding: 1em;
 }

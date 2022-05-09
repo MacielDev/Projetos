@@ -1,0 +1,32 @@
+.footer {
+    text-align: center;
+    margin: 0 7em;
+    margin-bottom: 5em;
+    font-size: 14px;
+}
+
+.footer__image {
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.footer__links {
+    color: var(--color--principal);
+    padding: 1em;
+}
+
+.footer__links:hover {
+    color: var(--color-secundary-button)
+}
+
+.footer__text {
+    color: var(--color-descriptions);
+    margin-top: 2em;
+}
